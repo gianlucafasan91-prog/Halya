@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, CheckCircle, Clock, Star } from 'lucide-react';
+import { Heart, CheckCircle, Clock, Star, Activity, Moon, Footprints } from 'lucide-react';
 
 const PatientDiary = () => {
   return (
@@ -29,6 +29,44 @@ const PatientDiary = () => {
               </ul>
             </div>
 
+            {/* Health Data Box */}
+            <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-400/20 rounded-2xl p-6 shadow-xl shadow-black/10">
+              <h4 className="text-white font-semibold mb-4 flex items-center gap-2">
+                <Activity className="w-5 h-5 text-blue-400" />
+                Dati salute (ultima settimana)
+              </h4>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-4 text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <Footprints className="w-6 h-6 text-green-400" />
+                  </div>
+                  <div className="text-green-400 font-bold text-lg">8.247</div>
+                  <div className="text-slate-400 text-xs">passi/giorno (media)</div>
+                  <div className="text-green-300 text-xs mt-1">+12% vs sett. prec.</div>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-4 text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <Moon className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div className="text-purple-400 font-bold text-lg">7.2h</div>
+                  <div className="text-slate-400 text-xs">sonno/notte (media)</div>
+                  <div className="text-purple-300 text-xs mt-1">Qualità: buona</div>
+                </div>
+                
+                <div className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-4 text-center">
+                  <div className="flex items-center justify-center mb-2">
+                    <Activity className="w-6 h-6 text-teal-400" />
+                  </div>
+                  <div className="text-teal-400 font-bold text-lg">72 bpm</div>
+                  <div className="text-slate-400 text-xs">freq. cardiaca media</div>
+                  <div className="text-teal-300 text-xs mt-1">Ritmo: normale</div>
+                </div>
+              </div>
+              <p className="text-slate-500 text-xs mt-4">
+                Dati sincronizzati da dispositivi wearable con consenso del paziente.
+              </p>
+            </div>
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white/3 backdrop-blur border border-white/6 rounded-2xl p-5 shadow-xl shadow-black/10">
                 <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
